@@ -3,6 +3,8 @@ const video = document.querySelector('video');
 navigator.mediaDevices.getUserMedia({video:true})
 .then(stream => {
     video.srcObject = stream;
+    video.videoWidth = '100px'
+    video.videoHeight = '150px'
     video.play();
 })
 .catch(error => {
